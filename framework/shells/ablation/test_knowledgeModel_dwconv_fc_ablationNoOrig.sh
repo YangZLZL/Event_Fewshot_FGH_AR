@@ -1,0 +1,25 @@
+cd $PATH_TO_PROJECT && CUDA_VISIBLE_DEVICES=0 python tsl_fsv_w_knowledge.py --test_video_path $PATH_TO_TEST_VIDEO \
+--manual_seed 10 \
+--test_list_path $PATH_TO_TEST_LIST \
+--dataset finegym \
+--train_crop random \
+--n_samples_for_each_video 1 \
+--knowledge_model dwconv_fc \
+--n_val_samples 1 \
+--clip_model r2plus1d_w_knowledge \
+--clip_model_depth 34 \
+--n_threads 4 \
+--result_path $PATH_TO_RESULT \
+--shot 5 \
+--test_way 5 \
+--query 3 \
+--resume_path $PATH_TO_RESUME \
+--emb_dim 491 \
+--batch_size 1 \
+--lr 0.001 \
+--nepoch 10 \
+--CLIP_visual_fea_reg "$PATH_TO_CLIP_FEATURES" \
+--CLIP_visual_arch "ViT-B/16"  --clip_visfea_sampleNum 8 --is_w_knowledge --is_amp --dropout_w_knowledge 0.9 \
+--proposals_fea_pth $PATH_TO_PROPOSAL_FEATURE \
+--n_finetune_classes 99 --is_w_knowledge \
+--ablation_removeOrig --is_amp --this_launch_script $0 --print_freq 200 --sample_mode sparse --temporal_modeling TSM2 --clip_duration 8 --return_id 

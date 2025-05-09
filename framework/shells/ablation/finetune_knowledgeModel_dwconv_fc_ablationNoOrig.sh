@@ -1,0 +1,26 @@
+cd $PATH_TO_PROJECT && CUDA_VISIBLE_DEVICES=0 python finetune_metatrain_w_knowledge.py --video_path $PATH_TO_VIDEO \
+--train_list_path $PATH_TO_TRAIN_LIST \
+--val_video_path $PATH_TO_VIDEO \
+--val_list_path $PATH_TO_VAL_LIST \
+--dataset finegym \
+--n_classes 400 \
+--n_finetune_classes 99 \
+--model r2plus1d_w_knowledge \
+--knowledge_model dwconv_fc \
+--model_depth 34 \
+--batch_size 16 \
+--n_threads 8 \
+--checkpoint 1 \
+--val_every 10 \
+--train_crop random \
+--result_path $PATH_TO_RESULT \
+--n_samples_for_each_video 8 \
+--n_val_samples 10 \
+--weight_decay 0.01 \
+--layer_lr 0.001 0.001 0.001 0.001 0.001 0.1 \
+--ft_begin_index 0 \
+--proposals_fea_pth $PATH_TO_PROPOSAL_FEATURE \
+--CLIP_visual_fea_reg "$PATH_TO_CLIP_FEATURES" \
+--CLIP_visual_arch "ViT-B/16"  \
+--clip_visfea_sampleNum 8 --is_w_knowledge --is_amp --dropout_w_knowledge 0.9 \
+--ablation_removeOrig --this_launch_script $0 --print_freq 200 --sample_mode sparse --n_epochs 31 --temporal_modeling TSM1 --sample_duration 8

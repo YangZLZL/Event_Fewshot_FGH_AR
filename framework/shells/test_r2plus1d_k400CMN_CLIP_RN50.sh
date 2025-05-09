@@ -1,0 +1,21 @@
+CUDA_VISIBLE_DEVICES=0 python tsl_fsv.py --test_video_path /home/linhanxi/home_data/k400_CMNsplit/ \
+--manual_seed 10 \
+--test_list_path data/kinetics100/data_splits/meta_test_filtered.txt \
+--dataset kinetics100 \
+--n_classes 64 \
+--train_crop random \
+--n_samples_for_each_video 10 \
+--n_val_samples 10 \
+--clip_model CLIP_RN50 \
+--clip_model_depth 34 \
+--n_threads 4 \
+--result_path /media/sda1/linhanxi/exp/few-shot-vid-cls/test_kinetics_save_2_5way5shot_metaTest_debug \
+--shot 1 \
+--test_way 5 \
+--query 5 \
+--emb_dim 1024 \
+--batch_size 64 \
+--lr 0.01 \
+--nepoch 10 \
+--is_amp --sample_size 224
+# --resume_path /media/sda1/linhanxi/exp/few-shot-vid-cls/finetune_kinetics/save_2.pth \

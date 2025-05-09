@@ -1,0 +1,21 @@
+cd few-shot-video-classification/ && CUDA_VISIBLE_DEVICES=1 python tsl_fsv.py --test_video_path /home/linhanxi/diving48_240p/frames_240p/ \
+--manual_seed 10 \
+--test_list_path data/diving48V2/meta_test.txt \
+--dataset diving48V2 \
+--n_classes 36 \
+--train_crop random \
+--n_samples_for_each_video 10 \
+--n_val_samples 10 \
+--clip_model r2plus1d \
+--clip_model_depth 34 \
+--n_threads 4 \
+--result_path /media/sda1/linhanxi/exp/few-shot-vid-cls/test_kinetics/TSL/5way5shot_metaTest_resume_save33 \
+--shot 5 \
+--test_way 5 \
+--query 5 \
+--resume_path /media/sda1/linhanxi/exp/few-shot-vid-cls/finetune_diving48V2/TSL/debug_resume/save_33.pth \
+--emb_dim 512 \
+--batch_size 64 \
+--lr 0.01 \
+--nepoch 10 \
+--is_amp
