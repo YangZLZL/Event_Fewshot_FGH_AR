@@ -1,1 +1,3 @@
-# Event_Fewshot_FGH_AR
+# Event-based Few-shot Fine-grained Human Action Recognition
+
+### Dataset
