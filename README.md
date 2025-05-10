@@ -27,8 +27,7 @@ For raw event data of E-FAction, please contact yangzl_xx@outlook.com.
 ### Train
 
 ```bash
-bash scripts/t2m_contact/train_ddp.sh ${EXP_NAME} ${PORT}
-```
+bash shells/ablation/finetune_knowledgeModel_dwconv_fc_ablationNoOrig.sh
 
 ### Test
 
@@ -48,3 +47,7 @@ If you would like to use our code or dataset, please cite either
   organization={IEEE}
 }
 ```
+
+### License
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for more details.
