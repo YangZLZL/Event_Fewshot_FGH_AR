@@ -19,4 +19,32 @@ pip install -r requirements.txt
 ```
 
 ## Dataset
-For raw event data, please contact yangzl_xx@outlook.com.
+For raw event data of E-FAction, please contact yangzl_xx@outlook.com.
+
+## EventEncoder
+
+## Our Framework
+### Train
+
+```bash
+bash scripts/t2m_contact/train_ddp.sh ${EXP_NAME} ${PORT}
+```
+
+### Test
+
+```bash
+bash shells/ablation/test_knowledgeModel_dwconv_fc_ablationNoOrig.sh
+```
+
+## Citation
+If you would like to use our code or dataset, please cite either
+```
+@inproceedings{yang2024event,
+  title={Event-based Few-shot Fine-grained Human Action Recognition},
+  author={Yang, Zonglin and Yang, Yan and Shi, Yuheng and Yang, Hao and Zhang, Ruikun and Liu, Liu and Wu, Xinxiao and Pan, Liyuan},
+  booktitle={2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  pages={519--526},
+  year={2024},
+  organization={IEEE}
+}
+```
