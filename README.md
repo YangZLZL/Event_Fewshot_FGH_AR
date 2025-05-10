@@ -28,7 +28,7 @@ For raw event data of E-FAction, please contact yangzl_xx@outlook.com.
 
 ```bash
 bash shells/ablation/finetune_knowledgeModel_dwconv_fc_ablationNoOrig.sh
-
+```
 ### Test
 
 ```bash
