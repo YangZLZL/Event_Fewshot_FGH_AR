@@ -19,4 +19,4 @@ pip install -r requirements.txt
 ```
 
 ## Dataset
-
+For raw event data, please contact yangzl_xx@outlook.com.
