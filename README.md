@@ -47,6 +47,9 @@ If you would like to use our code or dataset, please cite either
   organization={IEEE}
 }
 ```
+### Acknowledgement
+
+Partial code is borrowed from [CLIP](https://github.com/openai/CLIP), [VideoFlow](https://github.com/XiaoyuShi97/VideoFlow) and [pytorch-i3d](https://github.com/piergiaj/pytorch-i3d).
 
 ### License
 
