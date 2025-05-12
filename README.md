@@ -22,6 +22,18 @@ pip install -r requirements.txt
 For raw event data of E-FAction, please contact yangzl_xx@outlook.com.
 
 ## EventEncoder
+### Train
+
+```bash
+python eventencoder/eventencoder_trainer.py
+```
+
+### Test
+
+```bash
+python eventencoder/encode.py
+```
+
 
 ## Our Framework
 ### Train
